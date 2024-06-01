@@ -230,6 +230,9 @@ main h1 {
     padding-bottom: 3rem;
     justify-content: center;
 }
+.navbar{
+    z-index: 3;
+}
 
 /* small screen */
 
