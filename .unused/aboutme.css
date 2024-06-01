@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  :root{
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+    --accent-color: #3be489;
+}
+  main {
+    padding: 2rem;
+    font-size: 1rem;
+    font-family: 'Oswald';
+    display: flex;
+    background-color: #282834;
+    flex-direction: column;
+    align-items: start;
+    color: var(--text-primary);
+    text-indent: 1rem;
+    transform: translateZ(-2);
+  }
+  main li, main ul, main h2, main p, .stack{
+    box-shadow: 1px 1px 5px black;
+    background-color: var(--bg-primary);
+    border: #141418 solid;
+  }
+  main section:nth-child(even){
+    align-self: end;
+    text-align: right;
+    }
+  main section:nth-child(odd){
+    text-align: left;
+  }
+h1{
+  font-size: 4rem;
+  font-family: 'Inter';
+  font-variant: small-caps;
+}
+section h2{
+  margin: 0px;
+  text-align: center;
+}
+p{
+  margin-top: 0.2rem;
+}
+ul{
+  list-style: none;
+}
+.p0{
+  padding: 0rem;
+}
+.m0{
+  margin: 0rem;
+}
+strong{
+  color: var(--accent-color);
+}
+section{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+}
+.stack{
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0rem;
+}
+.stack div img{
+    height: 4rem;
+}
+.button{
+    border: none;
+    font-family: 'Inter', monospace;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1rem;
+    padding: 1.3rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(180deg, #3be489, #34c671);
+    max-width: max-content;
+    box-shadow: 1px 1px 5px black;
+    transition: 200ms;
+    margin-bottom: 50px;
+}
+.button:hover{
+    color: white;
+    background-image: linear-gradient(180deg, #1f7246, #176437);
+}
+.button-container{
+    padding: 0.5rem;
+    margin-bottom: 10vh;
+}
+  @media only screen and (max-width: 600px) {
+    main {
+        margin-top: 4.5rem;
+    }
+    
+  }
+.myimg{
+  width: 25vw;
+  align-self: flex-end;
+  filter: blur(2px) grayscale(100%);
+  transition: 0.6s;
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px #141418;
+  
+}
+.myimg:hover{
+  filter: blur(0px) grayscale(0%);
+  border-radius: 40%;
+}
+/* li hover */
+li{
+  transition: 0.2s;
+}
+li:hover{
+  transform: scale(120%) translateX(10%);
+  color: var(--accent-color);
+}
+h1 span:hover{
+  color: var(--accent-color);
+  font-style: italic;
+}
+  /* scroll animation */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: all 1s ease;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+
+.stack-contain:nth-child(2){
+    transition-delay: 300ms;
+}
+
+.stack-contain:nth-child(3){
+    transition-delay: 600ms;
+}
+/* reduce animation */
+@media(prefer-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
