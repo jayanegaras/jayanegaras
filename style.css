@@ -197,3 +197,27 @@ footer {
         height: 100%;
     }
 }
+
+/* scroll to top */
+#scrollTop{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    min-width: 100vw;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    transform: scale(0.6);
+    transition: 200ms;
+    z-index: 10;
+}
+#scrollTop:hover{
+    filter: invert();
+    transform: scale(0.6) translateY(-0.2rem);
+}
+#scrollTop svg{
+    height: 1.1rem;
+    margin-right: 0.5rem;
+}
