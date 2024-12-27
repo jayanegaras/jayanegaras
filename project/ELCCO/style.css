@@ -10,7 +10,7 @@
     font-size: 16px;
     font-family: 'Montserrat-Medium';
     --color-base: #b13e0f;
-    --dark-night: #131320;
+    --dark-night: #22222c;
     --color-light: #ff743d;
     --color-warm: #ffba3a;
 }
@@ -151,6 +151,7 @@ a{
         margin-right: 2rem;
         align-self: self-end;
     }
+    
     /* FOOTER */
     footer{
         background-color: var(--dark-night);
@@ -269,4 +270,15 @@ a{
     .smaller-font{
         font-size: 2rem;
         margin: 0;
+    }
+    /* Animationn */
+    .hidden{
+        opacity: 0;
+        transition: 1s;
+        transform: translateX(-2rem);
+    }
+    .show{
+        opacity: 1;
+        transition: 1s;
+        transform: translate(0rem);
     }
